@@ -6,12 +6,12 @@ package com.example.schmidegv.booklistinguda7;
 
 public class Book {
     private String mName;
-    private String mAuthor;
+    private StringBuilder mAuthor;
     private String mUrl;
     private String mDescription;
     private String mImageUrl;
 
-    public Book(String name, String author, String url, String description, String imageUrl) {
+    public Book(String name, StringBuilder author, String url, String description, String imageUrl) {
         mName = name;
         mAuthor = author;
         mUrl = url;
@@ -23,7 +23,7 @@ public class Book {
         return mName;
     }
 
-    public String getAuthor() {
+    public StringBuilder getAuthor() {
         return mAuthor;
     }
 

@@ -181,12 +181,16 @@ public class QueryUtils {
                 }
 
                 // Extract the value for the key called "authors"
-                JSONArray authorsArray = volumeInfo.getJSONArray("authors");
-                String authors = "";
+                StringBuilder authorList = new StringBuilder();
                 if (volumeInfo.has("authors")) {
-                    for (int j = 0; j < authorsArray.length(); j++) {
-                        authors = authors + authorsArray.getString(j) + "\n";
+                    JSONArray authors = volumeInfo.getJSONArray("authors");
+                    authorList.append(authors.getString(0));
+                    for (int j = 1; j < authors.length(); j++) {
+                        authorList.append(", " + authors.getString(j)); //if there is more than 1 author,
+                        // we list them all, devided by commas
                     }
+                } else {
+                    authorList.append("(unknown author)");
                 }
                 // Extract the value for the key called "previewLink"
                 String url = "";
@@ -194,7 +198,7 @@ public class QueryUtils {
                     url = volumeInfo.getString("previewLink");
                 }
                 // Create a new {@link Book} object
-                Book book = new Book(name, authors, url, description, imageUrl);
+                Book book = new Book(name, authorList, url, description, imageUrl);
 
                 // Add the new {@link Book} to the list of books.
                 books.add(book);
