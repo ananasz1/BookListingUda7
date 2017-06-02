@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.schmidegv.booklistinguda7.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/search"
+        style="@style/searchLayout">
+
+        <EditText
+            android:id="@+id/text_search"
+            android:hint="@string/search_hint"
+            style="@style/searchField" />
+
+        <Button
+            android:id="@+id/button_search"
+            style="@style/searchButton" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        style="@style/line" />
+
+    <ListView
+        android:id="@+id/list"
+        style="@style/listView"></ListView>
+
+    <!-- Empty view is only visible when the list has no items. -->
+    <TextView
+        android:id="@+id/empty_view"
+        style="@style/emptyText" />
+
+    <!-- Loading indicator is only shown before the first load -->
+    <ProgressBar
+        android:id="@+id/loading_indicator"
+        style="@style/progressBar" />
+
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="medium_margin">12dp</dimen>
+    <dimen name="search_size">40dp</dimen>
+    <dimen name="padding">16dp</dimen>
+    <dimen name="button">44dp</dimen>
+    <dimen name="thumbnail_width">70dp</dimen>
+    <dimen name="thumbnail_height">100dp</dimen>
+    <dimen name="title_text">18sp</dimen>
+    <dimen name="author_text">14sp</dimen>
+    <dimen name="desc_text">12sp</dimen>
+
+</resources>
